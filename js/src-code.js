@@ -13,9 +13,11 @@ for (i = 0; i < lowerCaseLetters.length; i++) {
 }
 // slitting the string of capital letters to an array
 var upperCaseLetters = upperCaseLettersString.split(" ");
-// removed an quotation mark of the final index
+
 var howManyCharacters = ""
+// removed an quotation mark of the final index
 upperCaseLetters.pop();
+// ask how many characters in the password
 function getTitleQuestion() {
     var isHere = true;
     while (isHere) {
@@ -35,8 +37,10 @@ function getRandomCharacters(characters, amount) {
     var random = Math.floor(Math.random() * amount)
     return characters[random]
 }
+// creating a empty question variable that i will need to hold my prompted questions
 var questions = ""
 
+// ask the main 4 questions and forces the user to choose yes or no
 function getQuestion() {
     var lowerCaseQuestion;
 while(true){
@@ -66,11 +70,10 @@ while(true){
     }
 }
     var questions = [lowerCaseQuestion, upperCaseQuestion, symbolsQuestion, numbersQuestion]
-
     return questions
-
 }
-
+// groups the random characters from each envoke call to an array.
+// i also moved the users yes options to a seperate array and returned that array
 function getSingleCharacter() {
     var groupCharacters = [getRandomCharacters(lowerCaseLetters, 26), getRandomCharacters(upperCaseLetters, 26), getRandomCharacters(numbers, 9), getRandomCharacters(symbols, 17)]
     var yes = []
@@ -89,7 +92,7 @@ function getSingleCharacter() {
     }
     return yes[random]
 }
-
+// i grabbed the single random output from the getSingleCharact function and push between 8 to 128 more of them to a new array and then return that array
 function getMultipleCharacters(amount) {
     var listOfCharacters = []
     for (var i = 0; i < amount; i++) {

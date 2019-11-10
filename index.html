@@ -3,15 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <title>hello world</title>
+    <title>Password Generator</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./img/password.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <textarea id="text"></textarea>
-    <button id="generatePassword">Generate password </button>
-
+<div class="container position-1">
+<div class="row">
+<div class="col-12">
+<h1 class="text-center">Generate Password</h1>
+</div>
+</div>
+<div class="row position-2">
+<div class="col-12 text-center">
+    <textarea id="text" class="text" placeholder="your secure password"></textarea>
+</div>
+    <div class="col-12 text-center"><button id="generatePassword">Generate password </button>
     <button id="clipboard">Copy to clipboard</button>
-
+</div>
+</div>
+</div>
     <script src="js/src-code.js"></script>
 </body>
 
