@@ -55,20 +55,21 @@ while(true){
     break
     }
 }
-var symbolsQuestion;
-while(true){
-    symbolsQuestion = prompt("Do you want symbols in your password. yes or no");
-    if(symbolsQuestion ==="no" || symbolsQuestion ==="yes"){
-    break
-    }
-}
 var numbersQuestion;
 while(true){
-    numbersQuestion = prompt("Do you want  numbers in your password.yes or no");
+    numbersQuestion = prompt("Do you want  Symbols in your password.yes or no");
     if(numbersQuestion ==="no" || numbersQuestion ==="yes"){
     break
     }
 }
+var symbolsQuestion;
+while(true){
+    symbolsQuestion = prompt("Do you want Numbers in your password. yes or no");
+    if(symbolsQuestion ==="no" || symbolsQuestion ==="yes"){
+    break
+    }
+}
+
     var questions = [lowerCaseQuestion, upperCaseQuestion, symbolsQuestion, numbersQuestion]
     return questions
 }
